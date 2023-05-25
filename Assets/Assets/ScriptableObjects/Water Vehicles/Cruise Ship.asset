@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f343e8da3ac3bf48b49cbdf7066f3a4, type: 3}
+  m_Name: Cruise Ship
+  m_EditorClassIdentifier: 
+  speed: 0.95
+  drownOnHit: 1
+  pointsWhenHit: 15
+  vehiclePrefab: {fileID: 5207065470648851284, guid: d4ba559de60a7e34eb70b2e030cf4e25,
+    type: 3}

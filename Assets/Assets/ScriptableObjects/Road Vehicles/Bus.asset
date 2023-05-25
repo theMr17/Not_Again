@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
+  m_Name: Bus
+  m_EditorClassIdentifier: 
+  speed: 1
+  stopTimeWhenHit: 1.5
+  speedIncreaseAfterHit: 0.25
+  pointsWhenHit: 10
+  vehiclePrefab: {fileID: 7962217136202085675, guid: 4c9baa79303e0884ebd1f48669a3a7a0,
+    type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b5117c4126cb342bf3ccc26dfc354f, type: 3}
+  m_Name: VehiclesListSO
+  m_EditorClassIdentifier: 
+  roadVehiclesSoList:
+  - {fileID: 11400000, guid: 7b7db30043e449840ad433024bec62ce, type: 2}
+  - {fileID: 11400000, guid: a21b8bdff1b404d4bb5485e5bb6c9d88, type: 2}
+  - {fileID: 11400000, guid: 575a1528356a325418aeadec0574d0e7, type: 2}
+  - {fileID: 11400000, guid: 7f75636921dd1b3418f6d129b6c748fd, type: 2}
+  waterVehiclesSoList:
+  - {fileID: 11400000, guid: 0d88095ce90874844958d67e85d52b0e, type: 2}
+  - {fileID: 11400000, guid: 437f101cee759f64387d8264e43ea4a6, type: 2}
