@@ -9,4 +9,5 @@ public class RoadVehiclesSO : ScriptableObject {
     public float speedIncreaseAfterHit;
     public int pointsWhenHit;
     public GameObject vehiclePrefab;
+    public Quaternion rotationAdjustment;
 }

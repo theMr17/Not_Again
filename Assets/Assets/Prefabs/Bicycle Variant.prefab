@@ -45,22 +45,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071069
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710677
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_Name
-      value: Bicycle
+      value: Bicycle Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8698442afe27e843b8ccf4310e4f90a, type: 3}

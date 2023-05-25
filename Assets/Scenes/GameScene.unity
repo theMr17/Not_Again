@@ -601,6 +601,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1652796187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652796189}
+  - component: {fileID: 1652796188}
+  m_Layer: 0
+  m_Name: VehiclesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1652796188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652796187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80102f9fb6db2964d9ee004d0b017008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehiclesListSo: {fileID: 11400000, guid: 5adcf53887e3fde4dbd7d3c3605e6fd6, type: 2}
+  spawnerSO: {fileID: 11400000, guid: 78fa60d67d6c4d14fb2f05a800fd8a7d, type: 2}
+--- !u!4 &1652796189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652796187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1692595037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,6 +713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7521119981636657845, guid: 2644818031251f24d998da53c26de56b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3614971323074673000, guid: 2644818031251f24d998da53c26de56b,
         type: 3}
@@ -855,6 +906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone
       objectReference: {fileID: 0}
+    - target: {fileID: 1029251417453675508, guid: 584666641fcbe8542a14bd33079d2af5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584666641fcbe8542a14bd33079d2af5, type: 3}
 --- !u!1001 &2250021426020150056
@@ -868,6 +924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439119163648553482, guid: 7870976fb42879844b0662747966dc2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1779792587369670832, guid: 7870976fb42879844b0662747966dc2d,
         type: 3}
@@ -993,6 +1054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train
       objectReference: {fileID: 0}
+    - target: {fileID: 3443890144217273810, guid: 2523dd173bf859b429ae735bd5905814,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2523dd173bf859b429ae735bd5905814, type: 3}
 --- !u!1001 &3414396346433179632
@@ -1006,6 +1072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bicycle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567956353985847625, guid: 9e99bfe4e4c9e834b96829e9033342e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2947858974193023987, guid: 9e99bfe4e4c9e834b96829e9033342e5,
         type: 3}
@@ -1131,6 +1202,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lifeboat
       objectReference: {fileID: 0}
+    - target: {fileID: 4076306632109931970, guid: 2b195ae17223c87418ced15a177382cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b195ae17223c87418ced15a177382cd, type: 3}
 --- !u!1001 &4936613302421231917
@@ -1199,6 +1275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CruiseShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207065470648851284, guid: d4ba559de60a7e34eb70b2e030cf4e25,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4ba559de60a7e34eb70b2e030cf4e25, type: 3}
@@ -1269,6 +1350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolBus
       objectReference: {fileID: 0}
+    - target: {fileID: 6652690980473492686, guid: 21f7b7aeb1920c049b66dcc0cbbde8bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f7b7aeb1920c049b66dcc0cbbde8bd, type: 3}
 --- !u!1001 &5888540464445874482
@@ -1286,7 +1372,7 @@ PrefabInstance:
     - target: {fileID: 6211296387766139298, guid: f63e1f896effa7642bd3ba238c2521ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.072
+      value: 3.78
       objectReference: {fileID: 0}
     - target: {fileID: 6211296387766139298, guid: f63e1f896effa7642bd3ba238c2521ba,
         type: 3}
@@ -1296,7 +1382,7 @@ PrefabInstance:
     - target: {fileID: 6211296387766139298, guid: f63e1f896effa7642bd3ba238c2521ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.83
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 6211296387766139298, guid: f63e1f896effa7642bd3ba238c2521ba,
         type: 3}
@@ -1337,6 +1423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ambulance
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735455998683112216, guid: f63e1f896effa7642bd3ba238c2521ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63e1f896effa7642bd3ba238c2521ba, type: 3}
@@ -1406,6 +1497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bus
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962217136202085675, guid: 4c9baa79303e0884ebd1f48669a3a7a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9baa79303e0884ebd1f48669a3a7a0, type: 3}

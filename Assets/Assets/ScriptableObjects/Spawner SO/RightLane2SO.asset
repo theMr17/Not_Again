@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
-  m_Name: Bicycle
+  m_Script: {fileID: 11500000, guid: 24b5205f66d7f774db22b0b43ccedab4, type: 3}
+  m_Name: RightLane2SO
   m_EditorClassIdentifier: 
-  speed: 0.85
-  stopTimeWhenHit: 1.5
-  speedIncreaseAfterHit: 0.25
-  pointsWhenHit: 10
-  vehiclePrefab: {fileID: 2567956353985847625, guid: 9e99bfe4e4c9e834b96829e9033342e5,
-    type: 3}
+  position: {x: -16, y: 3.853, z: 0.29}
+  rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}

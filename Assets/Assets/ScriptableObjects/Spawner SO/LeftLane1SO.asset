@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
-  m_Name: Bus
+  m_Script: {fileID: 11500000, guid: 24b5205f66d7f774db22b0b43ccedab4, type: 3}
+  m_Name: LeftLane1SO
   m_EditorClassIdentifier: 
-  speed: 1
-  stopTimeWhenHit: 1.5
-  speedIncreaseAfterHit: 0.25
-  pointsWhenHit: 10
-  vehiclePrefab: {fileID: 7962217136202085675, guid: 4c9baa79303e0884ebd1f48669a3a7a0,
-    type: 3}
+  position: {x: 16.61, y: 3.853, z: -2.49}
+  rotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}

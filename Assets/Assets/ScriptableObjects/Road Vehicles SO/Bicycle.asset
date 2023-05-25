@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
-  m_Name: School Bus 1
+  m_Name: Bicycle
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.85
   stopTimeWhenHit: 1.5
   speedIncreaseAfterHit: 0.25
   pointsWhenHit: 10
-  vehiclePrefab: {fileID: 6652690980473492686, guid: 21f7b7aeb1920c049b66dcc0cbbde8bd,
+  vehiclePrefab: {fileID: 2567956353985847625, guid: 9e99bfe4e4c9e834b96829e9033342e5,
     type: 3}
+  rotationAdjustment: {x: 0, y: -1, z: 0, w: -0.00000004371139}
