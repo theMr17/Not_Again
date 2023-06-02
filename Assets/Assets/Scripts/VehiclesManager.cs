@@ -3,27 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VehiclesManager : MonoBehaviour {
+
+    public static VehiclesManager Instance {get; private set;}
     
     [SerializeField] private VehiclesListSO vehiclesListSo;
     [SerializeField] private SpawnerSO spawnerSO;
     private List<RoadVehiclesSO> roadVehiclesSoList;
     private List<WaterVehiclesSO> waterVehiclesSoList;
 
+    private List<bool> laneHasVehicle;
+
     // Awake is called before Start
     private void Awake() {
+        Instance = this;
+
         // assigning vehicle list from the Scriptable object we created
         roadVehiclesSoList = vehiclesListSo.roadVehiclesSoList;
         waterVehiclesSoList = vehiclesListSo.waterVehiclesSoList;
+
+        // initializing all 4 lanes as empty
+        laneHasVehicle = new List<bool>();
+        laneHasVehicle.Add(false);
+        laneHasVehicle.Add(false);
+        laneHasVehicle.Add(false);
+        laneHasVehicle.Add(false);
     }
 
     // Start is called before the first frame update 
     void Start() {
-        SpawnVehicles();
     }
 
     // Update is called once per frame
     void Update() {
-        
+        SpawnVehicles();
     }
 
     private void SpawnVehicles() {
@@ -32,6 +44,12 @@ public class VehiclesManager : MonoBehaviour {
 
         // getting random index for spawn location 
         int spawnerIndex = rnd.Next(0, spawnerSO.spawnerListSO.Count);
+
+        if(laneHasVehicle[spawnerIndex]) // temporary, we modify this later
+        {
+            return;
+        }
+
         //getting random index of vehicle
         int vehicleIndex = rnd.Next(0, roadVehiclesSoList.Count);
 
@@ -49,6 +67,14 @@ public class VehiclesManager : MonoBehaviour {
         // sending spawn lane data to vehicle
         gameObject.GetComponent<Vehicle>().SetSpawnerIndex(spawnerIndex);
         gameObject.GetComponent<Vehicle>().SetVehicleSO(vehicle);
+
+        // storing lane data whether it already has a vehicle
+        laneHasVehicle[spawnerIndex] = true;
+    }
+
+    public void MakeLaneClear(int laneIndex) 
+    {
+        laneHasVehicle[laneIndex] = false;
     }
 }
 

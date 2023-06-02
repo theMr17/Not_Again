@@ -20,26 +20,34 @@ public class Vehicle : MonoBehaviour
     void Update()
     {
         Move();   
-        DespawnAtEnd();
+        CheckVehiclePosition();
     }
 
     private void Move()
     {
+        // moving the vehicle in proper direction and speed
         transform.Translate(GetMovementDirection() * vehicleSO.speed * speedMultiplier * Time.deltaTime , Space.World);
     }
 
-    private void DespawnAtEnd()
+    private void CheckVehiclePosition()
     {
         float xPos = transform.position.x;
 
         if(!isLeftLane && xPos > despawnXPos) // this is for right lane
         {
-            Destroy(gameObject);
+            DespawnVehicle();
         }
-        if(isLeftLane && xPos < -despawnXPos) // this is for left lane
+        else if(isLeftLane && xPos < -despawnXPos) // this is for left lane
         { 
-            Destroy(gameObject);
+            DespawnVehicle();
         }
+    }
+
+    private void DespawnVehicle() 
+    {
+        // clearing lane data before despawing
+        VehiclesManager.Instance.MakeLaneClear(spawnerIndex);
+        Destroy(gameObject);
     }
 
     private Vector3 GetMovementDirection() 
