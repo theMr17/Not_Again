@@ -85,7 +85,25 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0fcab4691201c9d47a43104375188150,
         type: 3}
       propertyPath: m_Name
-      value: Small Boat
+      value: Small Boat Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fcab4691201c9d47a43104375188150, type: 3}
+--- !u!1 &1439119163648553482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fcab4691201c9d47a43104375188150,
+    type: 3}
+  m_PrefabInstance: {fileID: 2250021425814933339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3728513079917284926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439119163648553482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2481d7154a6f3445984496f3f3dbd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

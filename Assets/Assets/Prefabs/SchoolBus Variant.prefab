@@ -85,7 +85,25 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0c26a67e92d81124189944233f5a014d,
         type: 3}
       propertyPath: m_Name
-      value: SchoolBus
+      value: SchoolBus Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c26a67e92d81124189944233f5a014d, type: 3}
+--- !u!1 &6652690980473492686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c26a67e92d81124189944233f5a014d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5805829188507953567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8332454393332433033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652690980473492686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2481d7154a6f3445984496f3f3dbd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

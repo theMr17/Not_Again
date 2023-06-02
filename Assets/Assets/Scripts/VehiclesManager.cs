@@ -40,14 +40,17 @@ public class VehiclesManager : MonoBehaviour {
         SpawnDetails spawnDetails = spawnerSO.spawnerListSO[spawnerIndex];
 
         // Spawning the Vehicle on its selected spawn location
-        GameObject child = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
+        GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
 
         // adjusting the Y rotation ONLY of individual vehicles after spawning
         float yRotationAdjustment = vehicle.rotationAdjustment.eulerAngles.y;
-        child.transform.rotation = Quaternion.Euler(0, child.transform.eulerAngles.y + yRotationAdjustment, 0);
+        gameObject.transform.rotation = Quaternion.Euler(0, gameObject.transform.eulerAngles.y + yRotationAdjustment, 0);
+
+        // sending spawn lane data to vehicle
+        gameObject.GetComponent<Vehicle>().SetSpawnerIndex(spawnerIndex);
+        gameObject.GetComponent<Vehicle>().SetVehicleSO(vehicle);
     }
 }
-
 
 // leftLaneSpawn1 = new Vector3(16.61f, 3.853f, -2.49f);
 // leftLaneSpawn2 = new Vector3(16.61f, 3.853f, -1.83f);

@@ -85,7 +85,25 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
         type: 3}
       propertyPath: m_Name
-      value: Bus
+      value: Bus Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aebc7dbb358ce2941a774a5e3d56e2ee, type: 3}
+--- !u!1 &7962217136202085675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 7115146027930699898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2644751180564433684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962217136202085675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2481d7154a6f3445984496f3f3dbd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
