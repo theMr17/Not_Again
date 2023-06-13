@@ -9,13 +9,14 @@ public class Player : MonoBehaviour
 
     private Rigidbody rb;
     private float walkSpeed = 1f;
-    private bool facingForward = true;
 
     private const string IS_WALKING = "isWalking";
+    private const string THROW = "throw";
 
     // Start is called before the first frame update
     void Start()
     {
+        // initializing the variable
         rb = GetComponent<Rigidbody>();
     }
 
@@ -34,37 +35,43 @@ public class Player : MonoBehaviour
 
     public void MoveUp() 
     {
+        // setting velocity to forward direction
         rb.velocity = Vector3.forward * walkSpeed;
         
-        if(!facingForward) {
-            facingForward = true;
-            RotatePlayer();
-        }
-        animator.SetBool(IS_WALKING, true);
+        // rotating the player to forward direction
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);   
 
-        
+        // activating the walking animation
+        animator.SetBool(IS_WALKING, true);    
     }
 
     public void MoveDown() 
     {
+        // setting velocity to backward direction
         rb.velocity = -Vector3.forward * walkSpeed;
 
-        if(facingForward) {
-            facingForward = false;
-            RotatePlayer();
-        }
+        // rotating the player to backward direction
+        transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
+        // activating the walking animation
         animator.SetBool(IS_WALKING, true);
     }
 
     public void StopMoving()
     {
+        // stopping the player movement
         rb.Sleep();
+
+        // deactivating the walking animation
         animator.SetBool(IS_WALKING, false);
     }
 
-    public void RotatePlayer() 
+    public void ThrowBalloon(Vector3 targetPos) 
     {
-        transform.Rotate(new Vector3(0f, 180f, 0f));
+        // activating the throwing animation
+        animator.SetTrigger(THROW);
+
+        // rotating the player to the throw direction
+        transform.LookAt(new Vector3(targetPos.x, 9f, targetPos.z), Vector3.up);
     }
 }
