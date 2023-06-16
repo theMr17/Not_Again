@@ -9,6 +9,7 @@ public class Vehicle : MonoBehaviour
     private RoadVehiclesSO vehicleSO;
     private float despawnXPos = 20f;
     private bool isLeftLane;
+    private bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,10 @@ public class Vehicle : MonoBehaviour
 
     private void Move()
     {
-        // moving the vehicle in proper direction and speed
-        transform.Translate(GetMovementDirection() * vehicleSO.speed * speedMultiplier * Time.deltaTime , Space.World);
+        if(canMove) {
+            // moving the vehicle in proper direction and speed
+            transform.Translate(GetMovementDirection() * vehicleSO.speed * speedMultiplier * Time.deltaTime , Space.World);
+        }
     }
 
     private void CheckVehiclePosition()
@@ -78,5 +81,20 @@ public class Vehicle : MonoBehaviour
     public void SetVehicleSO(RoadVehiclesSO roadVehicleSO) 
     {
         vehicleSO = roadVehicleSO;
+    }
+
+    public void VehicleHit() {
+        SetCanMove(false);
+        GameManger.Instance.AddScore(vehicleSO.pointsWhenHit);
+        StartCoroutine(WaitForTime(vehicleSO.stopTimeWhenHit));
+    }
+
+    private void SetCanMove(bool value) {
+        canMove = value;
+    }
+
+    IEnumerator WaitForTime(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        SetCanMove(true);
     }
 }

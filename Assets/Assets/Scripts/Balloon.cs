@@ -33,4 +33,18 @@ public class Balloon : MonoBehaviour
     {
         this.targetPos = targetPos;
     }
+
+    private void OnCollisionEnter(Collision obj) {
+        const int LAYER_ENVIRONMENT = 6;
+        const int LAYER_VEHICLE = 7;
+        if(obj.gameObject.layer == LAYER_ENVIRONMENT) {
+            Destroy(gameObject);
+        }
+
+        if(obj.transform.parent != null && obj.transform.parent.gameObject.layer == LAYER_VEHICLE) {
+            Destroy(gameObject);
+            obj.transform.parent.GetComponent<Vehicle>().VehicleHit();
+            Debug.Log("Car hit");
+        }
+    }
 }

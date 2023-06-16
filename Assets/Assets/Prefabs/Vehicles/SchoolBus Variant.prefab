@@ -87,8 +87,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolBus Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c26a67e92d81124189944233f5a014d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c26a67e92d81124189944233f5a014d, type: 3}
+--- !u!1 &1257176960653549024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4746812879470277759, guid: 0c26a67e92d81124189944233f5a014d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5805829188507953567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6925313953200191172
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257176960653549024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1563576208218915812, guid: 0c26a67e92d81124189944233f5a014d, type: 3}
 --- !u!1 &6652690980473492686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c26a67e92d81124189944233f5a014d,
