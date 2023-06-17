@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vehicle : MonoBehaviour
+public class WaterVehicle : MonoBehaviour
 {
     private float speedMultiplier = 1.5f;
     private int spawnerIndex;
-    private RoadVehiclesSO vehicleSO;
-    private float despawnXPos = 20f;
+    private WaterVehiclesSO vehicleSO;
+    private float despawnZPos = 15f;
     private bool isLeftLane;
     private bool canMove = true;
+    private bool drown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,14 @@ public class Vehicle : MonoBehaviour
     {
         Move();   
         CheckVehiclePosition();
+
+        if(drown) {
+            Drown();
+        }
+
+        if(transform.position.y < -11f) {
+            DespawnVehicle();
+        }
     }
 
     private void Move()
@@ -32,15 +41,20 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    private void Drown()
+    {
+        transform.Translate(new Vector3(0, -1, 0) * vehicleSO.speed * speedMultiplier * Time.deltaTime , Space.World);
+    }
+
     private void CheckVehiclePosition()
     {
-        float xPos = transform.position.x;
+        float zPos = transform.position.z;
 
-        if(!isLeftLane && xPos > despawnXPos) // this is for right lane
+        if(isLeftLane && zPos > despawnZPos) // this is for right lane
         {
             DespawnVehicle();
         }
-        else if(isLeftLane && xPos < -despawnXPos) // this is for left lane
+        else if(!isLeftLane && zPos < -despawnZPos) // this is for left lane
         { 
             DespawnVehicle();
         }
@@ -49,7 +63,7 @@ public class Vehicle : MonoBehaviour
     private void DespawnVehicle() 
     {
         // clearing lane data before despawing
-        VehiclesManager.Instance.MakeRoadLaneClear(spawnerIndex);
+        VehiclesManager.Instance.MakeWaterLaneClear(spawnerIndex);
         Destroy(gameObject);
     }
 
@@ -58,15 +72,13 @@ public class Vehicle : MonoBehaviour
         switch(spawnerIndex) {
             // Left lane
             case 0:
-            case 1:
                 isLeftLane = true;
-                return new Vector3(-1, 0, 0);
+                return new Vector3(0, 0, 1);
 
             // Right lane
-            case 2:
-            case 3:
+            case 1:
                 isLeftLane = false;
-                return new Vector3(1, 0, 0);
+                return new Vector3(0, 0, -1);
 
             default:
                 return Vector3.zero; // just returning a default value, this is will never be executed
@@ -78,15 +90,16 @@ public class Vehicle : MonoBehaviour
         spawnerIndex = index;
     }
 
-    public void SetVehicleSO(RoadVehiclesSO roadVehicleSO) 
+    public void SetVehicleSO(WaterVehiclesSO waterVehiclesSO) 
     {
-        vehicleSO = roadVehicleSO;
+        vehicleSO = waterVehiclesSO;
     }
 
     public void VehicleHit() {
-        SetCanMove(false);
+        drown = true;
+        canMove = false;
         GameManger.Instance.AddScore(vehicleSO.pointsWhenHit);
-        StartCoroutine(WaitForTime(vehicleSO.stopTimeWhenHit));
+        //StartCoroutine(WaitForTime(vehicleSO.stopTimeWhenHit));
     }
 
     private void SetCanMove(bool value) {

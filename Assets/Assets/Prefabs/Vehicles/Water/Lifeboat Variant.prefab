@@ -70,7 +70,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f0852be286fa85348bd48df1a147403f,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f0852be286fa85348bd48df1a147403f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0852be286fa85348bd48df1a147403f, type: 3}
@@ -80,7 +85,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3769682870138175635}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7777785091264799911
+--- !u!64 &-2616424647216319671
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076306632109931970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4743302122821290283, guid: f0852be286fa85348bd48df1a147403f, type: 3}
+--- !u!114 &6086390067174765215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,6 +108,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4076306632109931970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2481d7154a6f3445984496f3f3dbd65, type: 3}
+  m_Script: {fileID: 11500000, guid: 329e595895f375e4ba538d307de8b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

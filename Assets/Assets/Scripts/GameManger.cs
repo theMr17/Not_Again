@@ -27,6 +27,6 @@ public class GameManger : MonoBehaviour
 
     public void AddScore(int deltaScore) {
         score += deltaScore;
-        Text_Score.text = score.ToString();
+        Text_Score.text = "Your Score: " + score.ToString();
     }
 }

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2358d68325dc1e44e82ab800e412af86, type: 3}
   m_Name: SpawnerSO
   m_EditorClassIdentifier: 
-  spawnerListSO:
+  roadSpawnerListSO:
   - {fileID: 11400000, guid: 2c2a342afbc1d814a99316c7351634b6, type: 2}
   - {fileID: 11400000, guid: 913706b887b19de4ab699b5cb1f9363b, type: 2}
   - {fileID: 11400000, guid: 1ed1ecde1700a0b4092fee0b7680cfca, type: 2}
   - {fileID: 11400000, guid: 65e26307d2204724dac38c0a2d71ca81, type: 2}
+  waterSpawnerListSO:
+  - {fileID: 11400000, guid: 47aebbc1a0f27fc468378eef0a18acdc, type: 2}
+  - {fileID: 11400000, guid: 1b47c3f9a50cbfe468eef5aa0bdd9409, type: 2}

@@ -27,13 +27,21 @@ public class ClickDetector : MonoBehaviour
         // Transform (position, rotation & scale) of the camera
         Transform camTransform = Camera.main.transform;
 
+        float yPos = 0f;
         // y coordinate of the road
-        float yPosRoad = 3.56f;
+        switch(gameObject.tag) {
+            case "Road":
+                yPos = 3.56f;
+                break;
+            case "Water":
+                yPos = 0.7f;
+                break;
+        }
 
         // dot product of two 3D vectors
         // gives the distance between road and camera (maybe)
         float distance = Vector3.Dot(
-            new Vector3(0f, yPosRoad - camTransform.position.y, 0f), 
+            new Vector3(0f, yPos - camTransform.position.y, 0f), 
             camTransform.forward
         );
 

@@ -8,4 +8,5 @@ public class WaterVehiclesSO : ScriptableObject {
     public bool drownOnHit;
     public int pointsWhenHit;
     public GameObject vehiclePrefab;
+    public Quaternion rotationAdjustment;
 }

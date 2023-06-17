@@ -11,7 +11,8 @@ public class VehiclesManager : MonoBehaviour {
     private List<RoadVehiclesSO> roadVehiclesSoList;
     private List<WaterVehiclesSO> waterVehiclesSoList;
 
-    private List<bool> laneHasVehicle;
+    private List<bool> roadLaneHasVehicle;
+    private List<bool> waterLaneHasVehicle;
 
     // Awake is called before Start
     private void Awake() {
@@ -21,12 +22,17 @@ public class VehiclesManager : MonoBehaviour {
         roadVehiclesSoList = vehiclesListSo.roadVehiclesSoList;
         waterVehiclesSoList = vehiclesListSo.waterVehiclesSoList;
 
-        // initializing all 4 lanes as empty
-        laneHasVehicle = new List<bool>();
-        laneHasVehicle.Add(false);
-        laneHasVehicle.Add(false);
-        laneHasVehicle.Add(false);
-        laneHasVehicle.Add(false);
+        // initializing all 4 road lanes as empty
+        roadLaneHasVehicle = new List<bool>();
+        roadLaneHasVehicle.Add(false);
+        roadLaneHasVehicle.Add(false);
+        roadLaneHasVehicle.Add(false);
+        roadLaneHasVehicle.Add(false);
+
+        // initializing all 2 water lanes as empty
+        waterLaneHasVehicle = new List<bool>();
+        waterLaneHasVehicle.Add(false);
+        waterLaneHasVehicle.Add(false);
     }
 
     // Start is called before the first frame update 
@@ -35,17 +41,18 @@ public class VehiclesManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        SpawnVehicles();
+        SpawnRoadVehicles();
+        SpawnWaterVehicles();
     }
 
-    private void SpawnVehicles() {
+    private void SpawnRoadVehicles() {
         // initializing random class
         System.Random rnd = new System.Random();
 
         // getting random index for spawn location 
-        int spawnerIndex = rnd.Next(0, spawnerSO.spawnerListSO.Count);
+        int spawnerIndex = rnd.Next(0, spawnerSO.roadSpawnerListSO.Count);
 
-        if(laneHasVehicle[spawnerIndex]) // temporary, we modify this later
+        if(roadLaneHasVehicle[spawnerIndex]) // temporary, we modify this later
         {
             return;
         }
@@ -55,7 +62,7 @@ public class VehiclesManager : MonoBehaviour {
 
         // storing selected random vehicle and spawn location in variables
         RoadVehiclesSO vehicle = roadVehiclesSoList[vehicleIndex];
-        SpawnDetails spawnDetails = spawnerSO.spawnerListSO[spawnerIndex];
+        SpawnDetails spawnDetails = spawnerSO.roadSpawnerListSO[spawnerIndex];
 
         // Spawning the Vehicle on its selected spawn location
         GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
@@ -69,12 +76,52 @@ public class VehiclesManager : MonoBehaviour {
         gameObject.GetComponent<Vehicle>().SetVehicleSO(vehicle);
 
         // storing lane data whether it already has a vehicle
-        laneHasVehicle[spawnerIndex] = true;
+        roadLaneHasVehicle[spawnerIndex] = true;
     }
 
-    public void MakeLaneClear(int laneIndex) 
+    private void SpawnWaterVehicles() {
+        // initializing random class
+        System.Random rnd = new System.Random();
+
+        // getting random index for spawn location 
+        int spawnerIndex = rnd.Next(0, spawnerSO.waterSpawnerListSO.Count);
+
+        if(waterLaneHasVehicle[spawnerIndex]) // temporary, we modify this later
+        {
+            return;
+        }
+
+        //getting random index of vehicle
+        int vehicleIndex = rnd.Next(0, waterVehiclesSoList.Count);
+
+        // storing selected random vehicle and spawn location in variables
+        WaterVehiclesSO vehicle = waterVehiclesSoList[vehicleIndex];
+        SpawnDetails spawnDetails = spawnerSO.waterSpawnerListSO[spawnerIndex];
+
+        // Spawning the Vehicle on its selected spawn location
+        GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
+
+        // adjusting the X rotation ONLY of individual vehicles after spawning
+        float xRotationAdjustment = vehicle.rotationAdjustment.eulerAngles.x;
+        Debug.Log(gameObject.transform.rotation.y);
+        gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.eulerAngles.x + xRotationAdjustment, gameObject.transform.rotation.eulerAngles.y, 0);
+
+        // sending spawn lane data to vehicle
+        gameObject.GetComponent<WaterVehicle>().SetSpawnerIndex(spawnerIndex);
+        gameObject.GetComponent<WaterVehicle>().SetVehicleSO(vehicle);
+
+        // storing lane data whether it already has a vehicle
+        waterLaneHasVehicle[spawnerIndex] = true;
+    }
+
+    public void MakeRoadLaneClear(int laneIndex) 
     {
-        laneHasVehicle[laneIndex] = false;
+        roadLaneHasVehicle[laneIndex] = false;
+    }
+
+    public void MakeWaterLaneClear(int laneIndex) 
+    {
+        waterLaneHasVehicle[laneIndex] = false;
     }
 }
 

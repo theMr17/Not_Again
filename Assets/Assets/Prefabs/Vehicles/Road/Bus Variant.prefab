@@ -90,7 +90,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823506122465456227, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aebc7dbb358ce2941a774a5e3d56e2ee, type: 3}

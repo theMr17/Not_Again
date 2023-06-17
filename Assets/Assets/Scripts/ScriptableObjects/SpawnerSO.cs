@@ -4,5 +4,6 @@ using UnityEngine;
 
 [CreateAssetMenu()]
 public class SpawnerSO : ScriptableObject {
-    public List<SpawnDetails> spawnerListSO;
+    public List<SpawnDetails> roadSpawnerListSO;
+    public List<SpawnDetails> waterSpawnerListSO;
 }
