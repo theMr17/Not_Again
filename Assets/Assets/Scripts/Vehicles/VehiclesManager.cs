@@ -72,8 +72,8 @@ public class VehiclesManager : MonoBehaviour {
         gameObject.transform.rotation = Quaternion.Euler(0, gameObject.transform.eulerAngles.y + yRotationAdjustment, 0);
 
         // sending spawn lane data to vehicle
-        gameObject.GetComponent<Vehicle>().SetSpawnerIndex(spawnerIndex);
-        gameObject.GetComponent<Vehicle>().SetVehicleSO(vehicle);
+        gameObject.GetComponent<RoadVehicle>().SetSpawnerIndex(spawnerIndex);
+        gameObject.GetComponent<RoadVehicle>().SetVehicleSO(vehicle);
 
         // storing lane data whether it already has a vehicle
         roadLaneHasVehicle[spawnerIndex] = true;
@@ -103,7 +103,6 @@ public class VehiclesManager : MonoBehaviour {
 
         // adjusting the X rotation ONLY of individual vehicles after spawning
         float xRotationAdjustment = vehicle.rotationAdjustment.eulerAngles.x;
-        Debug.Log(gameObject.transform.rotation.y);
         gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.eulerAngles.x + xRotationAdjustment, gameObject.transform.rotation.eulerAngles.y, 0);
 
         // sending spawn lane data to vehicle

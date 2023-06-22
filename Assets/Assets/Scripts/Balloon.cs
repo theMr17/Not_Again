@@ -35,7 +35,6 @@ public class Balloon : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision obj) {
-        const int LAYER_ENVIRONMENT = 6;
         const string TAG_ROAD = "Road";
         const string TAG_VEHICLE = "Vehicle";
         if(obj.gameObject.tag == TAG_ROAD) {
@@ -44,12 +43,12 @@ public class Balloon : MonoBehaviour
 
         if(obj.transform.parent != null && obj.transform.parent.gameObject.tag == TAG_VEHICLE) {
             Destroy(gameObject);
-            obj.transform.parent.GetComponent<Vehicle>().VehicleHit();
+            obj.transform.parent.GetComponent<RoadVehicle>().VehicleHit();
         }
 
         if(obj.gameObject.tag == TAG_VEHICLE) {
             Destroy(gameObject);
-            obj.transform.GetComponent<WaterVehicle >().VehicleHit();
+            obj.transform.GetComponent<WaterVehicle>().VehicleHit();
         }
     }
 }
