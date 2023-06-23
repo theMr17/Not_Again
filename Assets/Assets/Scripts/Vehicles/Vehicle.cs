@@ -14,6 +14,10 @@ public class Vehicle: MonoBehaviour
     public int pointsWhenHit;
     public float stopTimeWhenHit;
 
+    protected int vehicleType = 0; // 0 for road, 1 for water
+    protected const int ROAD_VEHICLE_TYPE = 0;
+    protected const int WATER_VEHICLE_TYPE = 1;
+
     public virtual void Move()
     {
         if(canMove) {
@@ -38,8 +42,17 @@ public class Vehicle: MonoBehaviour
 
     public virtual void DespawnVehicle() 
     {
-        // clearing lane data before despawing
-        VehiclesManager.Instance.MakeRoadLaneClear(spawnerIndex);
+        // clearing lane data before despawing according to vehicle type
+        switch(vehicleType) {
+            case ROAD_VEHICLE_TYPE:
+                VehiclesManager.Instance.MakeRoadLaneClear(spawnerIndex);
+                break;
+            
+            case WATER_VEHICLE_TYPE:
+                VehiclesManager.Instance.MakeWaterLaneClear(spawnerIndex);
+                break;
+        }
+
         Destroy(gameObject);
     }
 

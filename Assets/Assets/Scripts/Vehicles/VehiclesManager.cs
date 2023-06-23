@@ -123,8 +123,3 @@ public class VehiclesManager : MonoBehaviour {
         waterLaneHasVehicle[laneIndex] = false;
     }
 }
-
-// leftLaneSpawn1 = new Vector3(16.61f, 3.853f, -2.49f);
-// leftLaneSpawn2 = new Vector3(16.61f, 3.853f, -1.83f);
-// rightLaneSpawn1 = new Vector3(-16.0f, 3.853f, -0.307f);
-// rightLaneSpawn2 = new Vector3(-16.0f, 3.853f, 0.29f);

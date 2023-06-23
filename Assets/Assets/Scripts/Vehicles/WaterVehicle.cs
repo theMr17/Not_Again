@@ -11,7 +11,7 @@ public class WaterVehicle : Vehicle
     // Start is called before the first frame update
     void Start()
     {
-        
+        vehicleType = WATER_VEHICLE_TYPE;
     }
 
     // Update is called once per frame

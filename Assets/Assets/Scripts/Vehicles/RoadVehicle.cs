@@ -10,7 +10,7 @@ public class RoadVehicle : Vehicle
     // Start is called before the first frame update
     void Start()
     {
-        
+        vehicleType = ROAD_VEHICLE_TYPE;
     }
 
     // Update is called once per frame
