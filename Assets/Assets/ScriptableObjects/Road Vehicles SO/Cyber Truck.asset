@@ -18,4 +18,4 @@ MonoBehaviour:
   pointsWhenHit: 15
   vehiclePrefab: {fileID: 8829446044764630500, guid: 0992af73744f46747b5572a624f6833b,
     type: 3}
-  rotationAdjustment: {x: 0, y: 0, z: 0, w: 0}
+  rotationAdjustment: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}

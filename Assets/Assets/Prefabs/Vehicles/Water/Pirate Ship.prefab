@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 4616504709471023954}
   - component: {fileID: 7491150682106415000}
   - component: {fileID: 267628075014543831}
+  - component: {fileID: 9217249610047271252}
   m_Layer: 0
   m_Name: Pirate Ship
   m_TagString: Untagged
@@ -349,3 +350,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.054248836, y: 0.081624985, z: 0.17599697}
   m_Center: {x: 0.00014898555, y: 0.014425965, z: 0.018586894}
+--- !u!114 &9217249610047271252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9004126855041607245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329e595895f375e4ba538d307de8b195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  pointsWhenHit: 0
+  stopTimeWhenHit: 0
