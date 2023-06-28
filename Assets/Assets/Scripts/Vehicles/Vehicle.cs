@@ -10,9 +10,9 @@ public class Vehicle: MonoBehaviour
     protected bool isLeftLane;
     private bool canMove = true;
 
-    public float speed;
-    public int pointsWhenHit;
-    public float stopTimeWhenHit;
+    [HideInInspector] public float speed;
+    [HideInInspector] public int pointsWhenHit;
+    [HideInInspector] public float stopTimeWhenHit;
 
     protected int vehicleType = 0; // 0 for road, 1 for water
     protected const int ROAD_VEHICLE_TYPE = 0;
