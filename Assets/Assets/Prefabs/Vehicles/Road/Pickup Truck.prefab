@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 7203580294636498632}
   m_Layer: 0
   m_Name: Pickup Truck
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

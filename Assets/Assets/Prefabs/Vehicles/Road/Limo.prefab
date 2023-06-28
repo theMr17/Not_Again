@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 3558804939550362953}
   m_Layer: 0
   m_Name: Limo
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

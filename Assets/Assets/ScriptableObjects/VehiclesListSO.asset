@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roadVehiclesSoList:
   - {fileID: 11400000, guid: 7b7db30043e449840ad433024bec62ce, type: 2}
-  - {fileID: 11400000, guid: a21b8bdff1b404d4bb5485e5bb6c9d88, type: 2}
   - {fileID: 11400000, guid: 575a1528356a325418aeadec0574d0e7, type: 2}
   - {fileID: 11400000, guid: 4095657eb94ebb840b9bd2016aa1e419, type: 2}
   - {fileID: 11400000, guid: 8b27b60ed45703f4d833083a294b9ff0, type: 2}

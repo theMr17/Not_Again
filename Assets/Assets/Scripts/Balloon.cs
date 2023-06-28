@@ -37,18 +37,25 @@ public class Balloon : MonoBehaviour
     private void OnCollisionEnter(Collision obj) {
         const string TAG_ROAD = "Road";
         const string TAG_VEHICLE = "Vehicle";
+        
         if(obj.gameObject.tag == TAG_ROAD) {
             Destroy(gameObject);
         }
 
-        if(obj.transform.parent != null && obj.transform.parent.gameObject.tag == TAG_VEHICLE) {
-            Destroy(gameObject);
-            obj.transform.parent.GetComponent<RoadVehicle>().VehicleHit();
-        }
-
         if(obj.gameObject.tag == TAG_VEHICLE) {
             Destroy(gameObject);
-            obj.transform.GetComponent<WaterVehicle>().VehicleHit();
+
+            WaterVehicle waterVehicle;
+            obj.transform.TryGetComponent<WaterVehicle>( out waterVehicle);
+            if(waterVehicle != null) {
+                waterVehicle.VehicleHit();
+            }
+
+            RoadVehicle roadVehicle;
+            obj.transform.TryGetComponent<RoadVehicle>( out roadVehicle);
+            if(roadVehicle != null) {
+                roadVehicle.VehicleHit();
+            }
         }
     }
 }

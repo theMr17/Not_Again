@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 8339137128285925557}
   m_Layer: 0
   m_Name: Jeep
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

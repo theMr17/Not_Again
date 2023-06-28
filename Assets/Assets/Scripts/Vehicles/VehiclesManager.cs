@@ -67,9 +67,19 @@ public class VehiclesManager : MonoBehaviour {
         // Spawning the Vehicle on its selected spawn location
         GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
 
-        // adjusting the Y rotation ONLY of individual vehicles after spawning
-        float yRotationAdjustment = vehicle.rotationAdjustment.eulerAngles.y;
-        gameObject.transform.rotation = Quaternion.Euler(0, gameObject.transform.eulerAngles.y + yRotationAdjustment, 0);
+        // adjusting the hight of the the vehicles after spawning
+        gameObject.transform.position = new Vector3(
+            spawnDetails.position.x, 
+            vehicle.vehiclePrefab.transform.localPosition.y + 4.745801f, 
+            spawnDetails.position.z
+        );
+
+        // adjusting the rotation of individual vehicles after spawning
+        gameObject.transform.rotation = Quaternion.Euler(
+            gameObject.transform.eulerAngles.x + vehicle.rotationAdjustment.eulerAngles.x, 
+            gameObject.transform.eulerAngles.y + vehicle.rotationAdjustment.eulerAngles.y,
+            gameObject.transform.eulerAngles.z + vehicle.rotationAdjustment.eulerAngles.z
+        );
 
         // sending spawn lane data to vehicle
         gameObject.GetComponent<RoadVehicle>().SetSpawnerIndex(spawnerIndex);
@@ -101,9 +111,19 @@ public class VehiclesManager : MonoBehaviour {
         // Spawning the Vehicle on its selected spawn location
         GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
 
+        // adjusting the hight of the the vehicles after spawning
+        gameObject.transform.position = new Vector3(
+            spawnDetails.position.x, 
+            vehicle.vehiclePrefab.transform.position.y + 4.745801f, 
+            spawnDetails.position.z
+        );
+
         // adjusting the X rotation ONLY of individual vehicles after spawning
-        float xRotationAdjustment = vehicle.rotationAdjustment.eulerAngles.x;
-        gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.eulerAngles.x + xRotationAdjustment, gameObject.transform.rotation.eulerAngles.y, 0);
+        gameObject.transform.rotation = Quaternion.Euler(
+            gameObject.transform.eulerAngles.x + vehicle.rotationAdjustment.eulerAngles.x, 
+            gameObject.transform.eulerAngles.y + vehicle.rotationAdjustment.eulerAngles.y,
+            gameObject.transform.eulerAngles.z + vehicle.rotationAdjustment.eulerAngles.z
+        );
 
         // sending spawn lane data to vehicle
         gameObject.GetComponent<WaterVehicle>().SetSpawnerIndex(spawnerIndex);

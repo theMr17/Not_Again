@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4960689104615210530
+--- !u!1 &3153698373442546629
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5736522532891993240}
-  - component: {fileID: 8661516427896957757}
-  - component: {fileID: 6906010565422014455}
-  - component: {fileID: 5194481765178164087}
-  - component: {fileID: 5194481765178164086}
+  - component: {fileID: 9108732926645018753}
+  - component: {fileID: 7527063590796881984}
+  - component: {fileID: 2380224206959271337}
   m_Layer: 0
   m_Name: Taxi
   m_TagString: Untagged
@@ -20,36 +18,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5736522532891993240
+--- !u!4 &9108732926645018753
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960689104615210530}
+  m_GameObject: {fileID: 3153698373442546629}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -5.350505, y: -1.0978014, z: -4.3958592}
+  m_LocalPosition: {x: -0.480505, y: 0, z: -0.21985912}
   m_LocalScale: {x: 12.6, y: 12.6, z: 12.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2245972206806442712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 270, z: 0}
---- !u!33 &8661516427896957757
+--- !u!33 &7527063590796881984
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960689104615210530}
+  m_GameObject: {fileID: 3153698373442546629}
   m_Mesh: {fileID: 9013070426119532338, guid: e6570aa67db8d1746bade93acd02ba6d, type: 3}
---- !u!23 &6906010565422014455
+--- !u!23 &2380224206959271337
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960689104615210530}
+  m_GameObject: {fileID: 3153698373442546629}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +83,60 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5194481765178164087
+--- !u!1 &7329758532942790365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2245972206806442712}
+  - component: {fileID: 293876663268307069}
+  - component: {fileID: 2027884568544913509}
+  m_Layer: 0
+  m_Name: Taxi
+  m_TagString: Vehicle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2245972206806442712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7329758532942790365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.87, y: -1.0978014, z: -4.176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9108732926645018753}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &293876663268307069
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960689104615210530}
+  m_GameObject: {fileID: 7329758532942790365}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04255638, y: 0.110246316, z: 0.03479083}
-  m_Center: {x: 0.017399656, y: 0.032772712, z: 0.01023}
---- !u!114 &5194481765178164086
+  m_Size: {x: 1.4, y: 0.39484808, z: 0.54}
+  m_Center: {x: -0.06999999, y: 0.15742405, z: 0}
+--- !u!114 &2027884568544913509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960689104615210530}
+  m_GameObject: {fileID: 7329758532942790365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}

@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0c26a67e92d81124189944233f5a014d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.853
+      value: -0.903
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c26a67e92d81124189944233f5a014d,
         type: 3}
@@ -104,32 +104,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c26a67e92d81124189944233f5a014d, type: 3}
---- !u!1 &1257176960653549024 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4746812879470277759, guid: 0c26a67e92d81124189944233f5a014d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5805829188507953567}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &6925313953200191172
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257176960653549024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1563576208218915812, guid: 0c26a67e92d81124189944233f5a014d, type: 3}
 --- !u!1 &6652690980473492686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c26a67e92d81124189944233f5a014d,
     type: 3}
   m_PrefabInstance: {fileID: 5805829188507953567}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &5704548564225412116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652690980473492686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.61, y: 2.13, z: 1.62}
+  m_Center: {x: -1.52, y: 0.05, z: 0}
 --- !u!114 &8332454393332433033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  pointsWhenHit: 0
+  stopTimeWhenHit: 0

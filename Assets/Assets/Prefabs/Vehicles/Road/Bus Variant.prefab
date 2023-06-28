@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.836
+      value: -0.903
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
         type: 3}
@@ -104,32 +104,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aebc7dbb358ce2941a774a5e3d56e2ee, type: 3}
---- !u!1 &3634172264784263193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5823506122465456227, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 7115146027930699898}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &7301334802070031040
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3634172264784263193}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1261789430142750755, guid: aebc7dbb358ce2941a774a5e3d56e2ee, type: 3}
 --- !u!1 &7962217136202085675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aebc7dbb358ce2941a774a5e3d56e2ee,
     type: 3}
   m_PrefabInstance: {fileID: 7115146027930699898}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &4507828658191587779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962217136202085675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.03, y: 1.6, z: 1.66}
+  m_Center: {x: -1.76, y: -0.21, z: 0}
 --- !u!114 &-2644751180564433684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  pointsWhenHit: 0
+  stopTimeWhenHit: 0
