@@ -8,8 +8,8 @@ public class VehiclesManager : MonoBehaviour {
     
     [SerializeField] private VehiclesListSO vehiclesListSo;
     [SerializeField] private SpawnerSO spawnerSO;
-    private List<RoadVehiclesSO> roadVehiclesSoList;
-    private List<WaterVehiclesSO> waterVehiclesSoList;
+    //private List<RoadVehiclesSO> roadVehiclesSoList;
+    //private List<WaterVehiclesSO> waterVehiclesSoList;
 
     private List<bool> roadLaneHasVehicle;
     private List<bool> waterLaneHasVehicle;
@@ -19,8 +19,8 @@ public class VehiclesManager : MonoBehaviour {
         Instance = this;
 
         // assigning vehicle list from the Scriptable object we created
-        roadVehiclesSoList = vehiclesListSo.roadVehiclesSoList;
-        waterVehiclesSoList = vehiclesListSo.waterVehiclesSoList;
+        //roadVehiclesSoList = vehiclesListSo.roadVehiclesSoList;
+        //waterVehiclesSoList = vehiclesListSo.waterVehiclesSoList;
 
         // initializing all 4 road lanes as empty
         roadLaneHasVehicle = new List<bool>();
@@ -41,11 +41,34 @@ public class VehiclesManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        SpawnRoadVehicles();
-        SpawnWaterVehicles();
+        //SpawnRoadVehicles();
+        //SpawnWaterVehicles();
+        CheckAllLanes();
     }
 
-    private void SpawnRoadVehicles() {
+    private void CheckAllLanes() {
+        foreach(bool hasVehicle in roadLaneHasVehicle) {
+            if(hasVehicle) {
+                return;
+            }
+        }
+
+        foreach(bool hasVehicle in waterLaneHasVehicle) {
+            if(hasVehicle) {
+                return;
+            }
+        }
+
+        if(GameManager.Instance.GetVehicleCount() == 0) {
+            GameManager.Instance.gameState = GameManager.GameState.GameOver;
+        }
+    }
+
+    public void SpawnRoadVehicles(List<RoadVehiclesSO> roadVehiclesSoList) {
+        if(roadVehiclesSoList.Count == 0) {
+            return;
+        }
+
         // initializing random class
         System.Random rnd = new System.Random();
 
@@ -63,6 +86,8 @@ public class VehiclesManager : MonoBehaviour {
         // storing selected random vehicle and spawn location in variables
         RoadVehiclesSO vehicle = roadVehiclesSoList[vehicleIndex];
         SpawnDetails spawnDetails = spawnerSO.roadSpawnerListSO[spawnerIndex];
+
+        GameManager.Instance.ReduceVehicleCount();
 
         // Spawning the Vehicle on its selected spawn location
         GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);
@@ -89,7 +114,11 @@ public class VehiclesManager : MonoBehaviour {
         roadLaneHasVehicle[spawnerIndex] = true;
     }
 
-    private void SpawnWaterVehicles() {
+    public void SpawnWaterVehicles(List<WaterVehiclesSO> waterVehiclesSoList) {
+        if(waterVehiclesSoList.Count == 0) {
+            return;
+        }
+
         // initializing random class
         System.Random rnd = new System.Random();
 
@@ -107,6 +136,8 @@ public class VehiclesManager : MonoBehaviour {
         // storing selected random vehicle and spawn location in variables
         WaterVehiclesSO vehicle = waterVehiclesSoList[vehicleIndex];
         SpawnDetails spawnDetails = spawnerSO.waterSpawnerListSO[spawnerIndex];
+
+        GameManager.Instance.ReduceVehicleCount();
 
         // Spawning the Vehicle on its selected spawn location
         GameObject gameObject = Instantiate(vehicle.vehiclePrefab, spawnDetails.position, spawnDetails.rotation);

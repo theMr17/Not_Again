@@ -83,7 +83,7 @@ public class Vehicle: MonoBehaviour
 
     public virtual void VehicleHit(bool canStop) {
         SetCanMove(false);
-        GameManger.Instance.AddScore(pointsWhenHit);
+        GameManager.Instance.AddScore(pointsWhenHit);
 
         if(canStop)
             StartCoroutine(WaitForTime(stopTimeWhenHit));
