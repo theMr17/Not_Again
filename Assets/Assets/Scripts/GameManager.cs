@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake() {
         Instance = this;
+
+        currentLevelIndex = PlayerPrefs.GetInt(MainMenuController.LOAD_LEVEL_INDEX, 0);
+        Debug.Log(currentLevelIndex+1);
         currentLevelSO = levels[currentLevelIndex];
         vehiclesLeft = currentLevelSO.spawnLimit;
     }
@@ -55,6 +58,12 @@ public class GameManager : MonoBehaviour
 
             case GameState.GameOver:
                 Debug.Log("Game Over");
+                bool nextLevelUnlocked = false;
+                if(!nextLevelUnlocked && score >= currentLevelSO.targetScore) {
+                    if(currentLevelIndex+1 == PlayerPrefs.GetInt(MainMenuController.UNLOCKED_LEVEL, 1))
+                    PlayerPrefs.SetInt(MainMenuController.UNLOCKED_LEVEL, currentLevelIndex+2);
+                    nextLevelUnlocked = true;
+                }
                 break;
         }
 
