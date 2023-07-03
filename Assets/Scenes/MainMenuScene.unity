@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42251715, g: 0.27059367, b: 0.16847697, a: 1}
+  m_IndirectSpecularColor: {r: 0.7390268, g: 0.43944666, b: 0.23707335, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -891,6 +891,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a85700f85bec9864daa0eddd90861d58, type: 2}
   - {fileID: 11400000, guid: 2f42f8bf8ffb3494e9616e2fd34a4c66, type: 2}
   - {fileID: 11400000, guid: a846310ce26410d478fa6e351639c5ea, type: 2}
+  - {fileID: 11400000, guid: 42a0847697fcce14dafe99f15c0eaa43, type: 2}
+  - {fileID: 11400000, guid: a9395d226a5d4094485e2b256f220d62, type: 2}
+  - {fileID: 11400000, guid: e1ae150aa439bb64f9817fca50170d20, type: 2}
+  - {fileID: 11400000, guid: 7cbb3ec20d992d04faa423285a3e6a53, type: 2}
+  - {fileID: 11400000, guid: 60f868cbeae19e54383017a9a5cc27ad, type: 2}
+  - {fileID: 11400000, guid: 0c58d8e5b42ccce408ea98f8b86aa850, type: 2}
+  - {fileID: 11400000, guid: b581e55bf190d7c43a42a983d3ac5a61, type: 2}
   levelButtonPrefab: {fileID: 4049641104341082238, guid: 58bf2849aa84e88489c2d92d073c74b7,
     type: 3}
 --- !u!4 &1290983675
