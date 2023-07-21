@@ -72,6 +72,7 @@ public class Balloon : MonoBehaviour
 
     private void Despawn() {
         GameObject splash = Instantiate(waterSplashParticles, transform.position, Quaternion.Euler(-90, 0, 0));
+        SoundManager.Instance.PlayWaterSplashSound(transform.position);
         Destroy(splash, 2f);
         Destroy(gameObject);
     }
