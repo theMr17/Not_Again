@@ -6,6 +6,7 @@ public class Balloon : MonoBehaviour
 {
     private Vector3 targetPos;
     private float speed = 15f;
+    [SerializeField] private GameObject waterSplashParticles;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class Balloon : MonoBehaviour
     void Update()
     {
         MoveToTarget();
+        CheckForDespawn();
     }
 
     private void MoveToTarget()
@@ -39,11 +41,11 @@ public class Balloon : MonoBehaviour
         const string TAG_VEHICLE = "Vehicle";
         
         if(obj.gameObject.tag == TAG_ROAD) {
-            Destroy(gameObject);
+            Despawn();
         }
 
         if(obj.gameObject.tag == TAG_VEHICLE) {
-            Destroy(gameObject);
+            Despawn();
 
             WaterVehicle waterVehicle;
             obj.transform.TryGetComponent<WaterVehicle>( out waterVehicle);
@@ -57,5 +59,20 @@ public class Balloon : MonoBehaviour
                 roadVehicle.VehicleHit();
             }
         }
+    }
+
+    private void CheckForDespawn() 
+    {
+        if(gameObject.GetComponent<Rigidbody>().velocity.magnitude == 0f) {
+            if(transform.position.y <= 3.6f ) {
+                Despawn();
+            }
+       }
+    }
+
+    private void Despawn() {
+        GameObject splash = Instantiate(waterSplashParticles, transform.position, Quaternion.Euler(-90, 0, 0));
+        Destroy(splash, 2f);
+        Destroy(gameObject);
     }
 }

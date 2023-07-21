@@ -127,3 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95f5423023030d409024ba2e9dd4be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterSplashParticles: {fileID: 3601900699119520072, guid: a3175a9f05c372948853ebd3851b10fb,
+    type: 3}
