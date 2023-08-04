@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text Text_TargetScore;
     [SerializeField] private TMP_Text Text_YourScore;
     [SerializeField] private TMP_Text Text_VehiclesLeft;
+    [SerializeField] private TMP_Text Text_Level;
     [SerializeField] private List<LevelSO> levels;
 
     public GameState gameState;
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
                 if(!nextLevelUnlocked && score >= currentLevelSO.targetScore) {
                     if(currentLevelIndex+1 == PlayerPrefs.GetInt(MainMenuController.UNLOCKED_LEVEL, 1))
                     PlayerPrefs.SetInt(MainMenuController.UNLOCKED_LEVEL, currentLevelIndex+2);
-                    PlayerPrefs.SetInt(MainMenuController.LOAD_LEVEL_INDEX, currentLevelIndex+2);
+                    PlayerPrefs.SetInt(MainMenuController.LOAD_LEVEL_INDEX, currentLevelIndex+1);
                     nextLevelUnlocked = true;
                 }
                 LoadGameOverMenu();
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
     private void InitializeGameUI() {
         Text_VehiclesLeft.text = "Vehicles Left: " + vehiclesLeft;
         Text_TargetScore.text = "Target Score: " + currentLevelSO.targetScore;
+        Text_Level.text = "Level: " + (currentLevelIndex + 1);
     }
 
     private bool isGameOver() {
