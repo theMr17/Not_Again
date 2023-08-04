@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int currentLevelIndex = 0;
     private LevelSO currentLevelSO;
     private int vehiclesLeft = 0;
+    private bool nextLevelUnlocked = false;
 
     public enum GameState {
         CountdownToStart,
@@ -58,12 +61,14 @@ public class GameManager : MonoBehaviour
 
             case GameState.GameOver:
                 Debug.Log("Game Over");
-                bool nextLevelUnlocked = false;
+                nextLevelUnlocked = false;
                 if(!nextLevelUnlocked && score >= currentLevelSO.targetScore) {
                     if(currentLevelIndex+1 == PlayerPrefs.GetInt(MainMenuController.UNLOCKED_LEVEL, 1))
                     PlayerPrefs.SetInt(MainMenuController.UNLOCKED_LEVEL, currentLevelIndex+2);
+                    PlayerPrefs.SetInt(MainMenuController.LOAD_LEVEL_INDEX, currentLevelIndex+2);
                     nextLevelUnlocked = true;
                 }
+                LoadGameOverMenu();
                 break;
         }
 
@@ -81,6 +86,14 @@ public class GameManager : MonoBehaviour
         } else {
             return false;
         }
+    }
+
+    private void LoadGameOverMenu() {
+        PlayerPrefs.SetInt(MainMenuController.CURRENT_TARGET_SCORE, currentLevelSO.targetScore);
+        PlayerPrefs.SetInt(MainMenuController.YOUR_TARGET_SCORE, score);
+        PlayerPrefs.SetInt(MainMenuController.CURRENT_LEVEL_INDEX, currentLevelIndex);
+        PlayerPrefs.SetInt(MainMenuController.IS_LEVEL_CLEARED, Convert.ToInt32(nextLevelUnlocked));
+        SceneManager.LoadScene("GameOverScene");
     }
 
     public void AddScore(int deltaScore) {

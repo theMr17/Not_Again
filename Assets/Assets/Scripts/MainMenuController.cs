@@ -15,13 +15,17 @@ public class MainMenuController : MonoBehaviour
     private Transform activeContainer;
     public static string UNLOCKED_LEVEL = "unlockedLevel";
     public static string LOAD_LEVEL_INDEX = "loadLevelIndex";
+    public static string CURRENT_TARGET_SCORE = "currentTargetScore";
+    public static string YOUR_TARGET_SCORE = "yourTargetScore";
+    public static string CURRENT_LEVEL_INDEX = "currentLevelIndex";
+    public static string IS_LEVEL_CLEARED = "isLevelCleared";
 
     // Start is called before the first frame update
     void Start()
     {
         activeContainer = buttonsContainer;
         int unlockedLevel = PlayerPrefs.GetInt(UNLOCKED_LEVEL, 1);
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         Debug.Log(unlockedLevel);
 
         for (int i = 0; i < levels.Length; i++) 
