@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private Transform levelsContainer;
     [SerializeField] private LevelSO[] levels;
     [SerializeField] private GameObject levelButtonPrefab;
+    [SerializeField] private Animator transitionAnimator;
 
     private Transform activeContainer;
     public static string UNLOCKED_LEVEL = "unlockedLevel";
@@ -64,6 +65,12 @@ public class MainMenuController : MonoBehaviour
 
     private void LoadLevel(int level) {
         PlayerPrefs.SetInt(LOAD_LEVEL_INDEX, level);
-        SceneManager.LoadScene("GameScene");
+        StartCoroutine(LoadScene("GameScene"));
+    }
+
+    IEnumerator LoadScene(string sceneName) {
+        transitionAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
     }
 }

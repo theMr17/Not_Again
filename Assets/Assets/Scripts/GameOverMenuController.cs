@@ -14,6 +14,7 @@ public class GameOverMenuController : MonoBehaviour
     [SerializeField] private TMP_Text yourScoreText;
     [SerializeField] private Button playButton;
     [SerializeField] private TMP_Text playButtonText;
+    [SerializeField] private Animator transitionAnimator;
 
     [SerializeField] private AudioClip gameOverAudio;
     [SerializeField] private AudioClip levelCompletedAudio;
@@ -39,7 +40,7 @@ public class GameOverMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -49,10 +50,16 @@ public class GameOverMenuController : MonoBehaviour
     }
 
     public void LoadMainMenu() {
-        SceneManager.LoadScene("MainMenuScene");
+        StartCoroutine(LoadScene("MainMenuScene"));
     }
 
     public void Play() {
-        SceneManager.LoadScene("GameScene");
+        StartCoroutine(LoadScene("GameScene"));
+    }
+
+    IEnumerator LoadScene(string sceneName) {
+        transitionAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text Text_VehiclesLeft;
     [SerializeField] private TMP_Text Text_Level;
     [SerializeField] private List<LevelSO> levels;
+    [SerializeField] private Animator transitionAnimator;
 
     public GameState gameState;
     private int score = 0;
@@ -95,7 +96,13 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt(MainMenuController.YOUR_TARGET_SCORE, score);
         PlayerPrefs.SetInt(MainMenuController.CURRENT_LEVEL_INDEX, currentLevelIndex);
         PlayerPrefs.SetInt(MainMenuController.IS_LEVEL_CLEARED, Convert.ToInt32(nextLevelUnlocked));
-        SceneManager.LoadScene("GameOverScene");
+        StartCoroutine(LoadScene("GameOverScene"));
+    }
+
+    IEnumerator LoadScene(string sceneName) {
+        transitionAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void AddScore(int deltaScore) {
