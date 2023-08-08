@@ -57,6 +57,10 @@ public class MainMenuController : MonoBehaviour
         setActiveContainer(levelsContainer);
     }
 
+    public void Exit() {
+        Application.Quit();
+    }
+
     private void setActiveContainer(Transform container) {       
         activeContainer.gameObject.SetActive(false);
         container.gameObject.SetActive(true);
