@@ -19,5 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ecbebdbee0359441951472adbe3e0c9, type: 2}
   - {fileID: 11400000, guid: 7f75636921dd1b3418f6d129b6c748fd, type: 2}
   - {fileID: 11400000, guid: 852d32d4f3d00994f9cf53a0a23872f1, type: 2}
-  waterVehiclesSoList:
-  - {fileID: 11400000, guid: 0d88095ce90874844958d67e85d52b0e, type: 2}
+  waterVehiclesSoList: []
