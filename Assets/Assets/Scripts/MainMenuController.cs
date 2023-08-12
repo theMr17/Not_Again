@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using JetBrains.Annotations;
-using UnityEditor.Rendering.Universal.ShaderGUI;
 
 public class MainMenuController : MonoBehaviour
 {
