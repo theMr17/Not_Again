@@ -35,6 +35,8 @@ public class GameOverMenuController : MonoBehaviour
             playButtonText.text = "Try Again";
         }
         audioPlayer.Play();
+
+        playButton.gameObject.SetActive(PlayerPrefs.GetInt(MainMenuController.CURRENT_LEVEL_INDEX, 0) + 1 < 10);
     }
 
     // Start is called before the first frame update

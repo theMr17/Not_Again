@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Game Over");
                 nextLevelUnlocked = false;
                 if(!nextLevelUnlocked && score >= currentLevelSO.targetScore) {
-                    if(currentLevelIndex+1 == PlayerPrefs.GetInt(MainMenuController.UNLOCKED_LEVEL, 1))
+                    if(currentLevelIndex+1 == PlayerPrefs.GetInt(MainMenuController.UNLOCKED_LEVEL, 1) && currentLevelIndex+1 < 10)
                     PlayerPrefs.SetInt(MainMenuController.UNLOCKED_LEVEL, currentLevelIndex+2);
                     PlayerPrefs.SetInt(MainMenuController.LOAD_LEVEL_INDEX, currentLevelIndex+1);
                     nextLevelUnlocked = true;
