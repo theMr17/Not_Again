@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
   m_Name: Muscle Car
   m_EditorClassIdentifier: 
+  vehicleName: Muscle Car
   speed: 1.25
   stopTimeWhenHit: 1
   speedIncreaseAfterHit: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f343e8da3ac3bf48b49cbdf7066f3a4, type: 3}
   m_Name: Cruise Ship
   m_EditorClassIdentifier: 
+  vehicleName: Cruise Ship
   speed: 0.95
   drownOnHit: 1
   pointsWhenHit: 15

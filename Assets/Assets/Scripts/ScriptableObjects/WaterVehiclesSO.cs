@@ -4,6 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu()]
 public class WaterVehiclesSO : ScriptableObject {
+    public string vehicleName;
     public float speed;
     public bool drownOnHit;
     public int pointsWhenHit;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu()]
 public class RoadVehiclesSO : ScriptableObject {
+    public string vehicleName;
     public float speed;
     public float stopTimeWhenHit;
     public float speedIncreaseAfterHit;

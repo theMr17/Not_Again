@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e006b462287fe0043b06a77e955e1e5e, type: 3}
   m_Name: Bus
   m_EditorClassIdentifier: 
+  vehicleName: Bus
   speed: 1
   stopTimeWhenHit: 1.5
   speedIncreaseAfterHit: 0.25

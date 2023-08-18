@@ -77,6 +77,7 @@ public class WaterVehicle : Vehicle
     {
         vehicleSO = waterVehiclesSO;
         
+        base.vehicleName = vehicleSO.vehicleName;
         base.speed = vehicleSO.speed;
         base.pointsWhenHit = vehicleSO.pointsWhenHit;
     }

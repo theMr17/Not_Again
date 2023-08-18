@@ -10,6 +10,7 @@ public class Vehicle: MonoBehaviour
     protected bool isLeftLane;
     private bool canMove = true;
 
+    [HideInInspector] public string vehicleName;
     [HideInInspector] public float speed;
     [HideInInspector] public int pointsWhenHit;
     [HideInInspector] public float stopTimeWhenHit;
@@ -84,6 +85,7 @@ public class Vehicle: MonoBehaviour
     public virtual void VehicleHit(bool canStop) {
         SetCanMove(false);
         GameManager.Instance.AddScore(pointsWhenHit);
+        HitScoreContainer.Instance.InsertHitScoreItem(pointsWhenHit, vehicleName);
 
         if(canStop)
             StartCoroutine(WaitForTime(stopTimeWhenHit));

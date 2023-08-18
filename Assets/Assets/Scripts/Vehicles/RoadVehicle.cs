@@ -49,6 +49,7 @@ public class RoadVehicle : Vehicle
     {
         vehicleSO = roadVehicleSO;
 
+        base.vehicleName = vehicleSO.vehicleName;
         base.speed = vehicleSO.speed;
         base.pointsWhenHit = vehicleSO.pointsWhenHit;
         base.stopTimeWhenHit = vehicleSO.stopTimeWhenHit;
