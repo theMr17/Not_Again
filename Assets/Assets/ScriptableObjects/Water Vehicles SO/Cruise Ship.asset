@@ -15,7 +15,7 @@ MonoBehaviour:
   vehicleName: Cruise Ship
   speed: 0.95
   drownOnHit: 1
-  pointsWhenHit: 15
+  pointsWhenHit: 30
   vehiclePrefab: {fileID: 5207065470648851284, guid: d4ba559de60a7e34eb70b2e030cf4e25,
     type: 3}
   rotationAdjustment: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}

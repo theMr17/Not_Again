@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Pirate Ship
   m_EditorClassIdentifier: 
   vehicleName: Pirate Ship
-  speed: 1.75
+  speed: 1.1
   drownOnHit: 1
-  pointsWhenHit: 30
+  pointsWhenHit: 40
   vehiclePrefab: {fileID: 9004126855041607245, guid: 8401927fc89eab746aa853fd2614a6d2,
     type: 3}
   rotationAdjustment: {x: 0, y: 0, z: 0, w: 0}

@@ -16,7 +16,7 @@ MonoBehaviour:
   speed: 1.2
   stopTimeWhenHit: 1
   speedIncreaseAfterHit: 0
-  pointsWhenHit: 15
+  pointsWhenHit: 25
   vehiclePrefab: {fileID: 3358157885019339006, guid: c6672b9efc38b3c4daa3cf2cc616a0fd,
     type: 3}
   rotationAdjustment: {x: 0, y: 0, z: 0, w: 0}

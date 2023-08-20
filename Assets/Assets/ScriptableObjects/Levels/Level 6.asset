@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51545ffd772705c4e8607bb2222c1965, type: 3}
   m_Name: Level 6
   m_EditorClassIdentifier: 
-  spawnLimit: 35
-  targetScore: 450
+  spawnLimit: 30
+  targetScore: 625
   roadVehiclesSoList:
   - {fileID: 11400000, guid: b8651474de273b84486f8327bbc45953, type: 2}
   - {fileID: 11400000, guid: 6ecbebdbee0359441951472adbe3e0c9, type: 2}
