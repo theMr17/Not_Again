@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 5261770671399297158}
   - component: {fileID: 5660789373049735008}
   - component: {fileID: 8339137128285925557}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Jeep
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

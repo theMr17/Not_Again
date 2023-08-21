@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5863643092988615817}
   - component: {fileID: 6257014107531066214}
   - component: {fileID: 6257014107531066209}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Police Car
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8698442afe27e843b8ccf4310e4f90a,
         type: 3}
@@ -117,3 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
+  speed: 0
+  pointsWhenHit: 0
+  stopTimeWhenHit: 0

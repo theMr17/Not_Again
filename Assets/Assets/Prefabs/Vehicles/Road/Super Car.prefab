@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 9033885884185427694}
   - component: {fileID: 8850829066340980993}
   - component: {fileID: 8850829066340980992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Super Car
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

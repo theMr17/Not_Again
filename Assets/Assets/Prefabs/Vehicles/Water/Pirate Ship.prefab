@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 7491150682106415000}
   - component: {fileID: 267628075014543831}
   - component: {fileID: 9217249610047271252}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pirate Ship
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329e595895f375e4ba538d307de8b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

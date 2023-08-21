@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2245972206806442712}
   - component: {fileID: 293876663268307069}
   - component: {fileID: 2027884568544913509}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Taxi
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

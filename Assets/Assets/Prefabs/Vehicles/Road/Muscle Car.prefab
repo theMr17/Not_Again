@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 5321634627899699232}
   - component: {fileID: 6781202635631602855}
   - component: {fileID: 7222388553157766815}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Muscle Car
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0

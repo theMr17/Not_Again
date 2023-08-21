@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 4134224636622930227}
   - component: {fileID: 4527540506718725855}
   - component: {fileID: 3558804939550362953}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Limo
   m_TagString: Vehicle
   m_Icon: {fileID: 0}
@@ -829,6 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da91cdc9f012c45b21273d8c2de3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleName: 
   speed: 0
   pointsWhenHit: 0
   stopTimeWhenHit: 0
