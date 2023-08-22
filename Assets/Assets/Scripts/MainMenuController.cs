@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,8 +17,11 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject levelButtonPrefab;
     [SerializeField] private Animator transitionAnimator;
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private VehiclesListSO vehiclesListSO;
 
     private Transform activeContainer;
+    private bool isRulesPageInitialized = false;
+
     public static string UNLOCKED_LEVEL = "unlockedLevel";
     public static string LOAD_LEVEL_INDEX = "loadLevelIndex";
     public static string CURRENT_TARGET_SCORE = "currentTargetScore";
@@ -72,6 +76,10 @@ public class MainMenuController : MonoBehaviour
 
     public void Rules() {
         SetActiveContainer(rulesContainer);
+        
+        if(!isRulesPageInitialized) {
+            InitializeRulesPage();
+        }
     }
 
     public void Settings() {
@@ -101,5 +109,20 @@ public class MainMenuController : MonoBehaviour
         transitionAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void InitializeRulesPage() {
+        List<RoadVehiclesSO> roadVehiclesSoList = vehiclesListSO.roadVehiclesSoList;
+        List<WaterVehiclesSO> waterVehiclesSoList = vehiclesListSO.waterVehiclesSoList;
+
+        foreach (WaterVehiclesSO waterVehicle in waterVehiclesSoList) {
+            HitScoreContainer.Instance.InsertHitScoreItem(waterVehicle.pointsWhenHit, waterVehicle.vehicleName, true);
+        }
+
+        foreach (RoadVehiclesSO roadVehicle in roadVehiclesSoList) {
+            HitScoreContainer.Instance.InsertHitScoreItem(roadVehicle.pointsWhenHit, roadVehicle.vehicleName, true);
+        }
+
+        isRulesPageInitialized = true;
     }
 }

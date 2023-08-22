@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: VehiclesListSO
   m_EditorClassIdentifier: 
   roadVehiclesSoList:
-  - {fileID: 11400000, guid: 7b7db30043e449840ad433024bec62ce, type: 2}
   - {fileID: 11400000, guid: 575a1528356a325418aeadec0574d0e7, type: 2}
   - {fileID: 11400000, guid: 4095657eb94ebb840b9bd2016aa1e419, type: 2}
   - {fileID: 11400000, guid: 8b27b60ed45703f4d833083a294b9ff0, type: 2}
   - {fileID: 11400000, guid: c48c735666b30da4b934d95543116166, type: 2}
-  - {fileID: 11400000, guid: de56e52df16f2e34d9f5b2f9398009c0, type: 2}
   - {fileID: 11400000, guid: b8651474de273b84486f8327bbc45953, type: 2}
   - {fileID: 11400000, guid: e9d2b35cfd1db76458a4a15d8610a3b1, type: 2}
-  - {fileID: 11400000, guid: 852d32d4f3d00994f9cf53a0a23872f1, type: 2}
   - {fileID: 11400000, guid: 7f75636921dd1b3418f6d129b6c748fd, type: 2}
   - {fileID: 11400000, guid: 318ba7e0a599ad64ab561e496fd670fa, type: 2}
   - {fileID: 11400000, guid: 9bf083ff798dced42bceae15bc073552, type: 2}
   - {fileID: 11400000, guid: 6ecbebdbee0359441951472adbe3e0c9, type: 2}
   - {fileID: 11400000, guid: b350444a215c94b43857bda4411d57f8, type: 2}
+  - {fileID: 11400000, guid: 7b7db30043e449840ad433024bec62ce, type: 2}
+  - {fileID: 11400000, guid: 852d32d4f3d00994f9cf53a0a23872f1, type: 2}
+  - {fileID: 11400000, guid: de56e52df16f2e34d9f5b2f9398009c0, type: 2}
   waterVehiclesSoList:
   - {fileID: 11400000, guid: 0d88095ce90874844958d67e85d52b0e, type: 2}
   - {fileID: 11400000, guid: 16ea8561332f05c48ad86e0db2efe0e1, type: 2}

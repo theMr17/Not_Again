@@ -12,6 +12,7 @@ public class HitScoreItem : MonoBehaviour
 
     private float lifeTimeInSeconds = 3f;
     private float timeLeftInSeconds = 0f;
+    private bool isAlwaysEnabled = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,6 +21,11 @@ public class HitScoreItem : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if(isAlwaysEnabled) {
+            Debug.Log(vehicleNameText.text);
+            return;
+        }
+
         if(timeLeftInSeconds >= lifeTimeInSeconds) {
             Destroy(gameObject);
         } else {
@@ -39,5 +45,9 @@ public class HitScoreItem : MonoBehaviour
 
     public void SetVehicleNameText(string vehicleName) {
         vehicleNameText.text = vehicleName;
+    }
+
+    public void SetIsAlwaysEnabled(bool isAlwaysEnabled) {
+        this.isAlwaysEnabled = isAlwaysEnabled;
     }
 }

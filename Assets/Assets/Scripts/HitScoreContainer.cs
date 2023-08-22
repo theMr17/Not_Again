@@ -12,9 +12,10 @@ public class HitScoreContainer : MonoBehaviour {
         Instance = this;
     }
 
-    public void InsertHitScoreItem(int deltaScore, string vehicleName) {
+    public void InsertHitScoreItem(int deltaScore, string vehicleName, bool isAlwaysEnabled = false) {
         HitScoreItem hitScoreItem = Instantiate(hitScoreItemPrefab, gameObject.transform).GetComponent<HitScoreItem>();
         hitScoreItem.SetDeltaScoreText(deltaScore);
         hitScoreItem.SetVehicleNameText(vehicleName);
+        hitScoreItem.SetIsAlwaysEnabled(isAlwaysEnabled);
     }
 }
