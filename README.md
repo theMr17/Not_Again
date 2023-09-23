@@ -5,9 +5,8 @@ An intense PC game where you play as Jack, a bullied teenager seeking revenge wi
 
 ## Screenshots
 
-<img src="https://github.com/the-mr17/Not_Again_Unity/assets/84731134/23f44724-2280-4b78-828c-3e25cce0e2d0" width="800">
-<img src="https://github.com/the-mr17/Not_Again_Unity/assets/84731134/4fb4e0a0-a494-45a9-9c10-75d9266d8e2f" width="800">
-
+<img src="https://github.com/the-mr17/Not_Again/assets/84731134/edf44f49-b148-448c-80bf-0b6bf1766831" width="800">
+<img src="https://github.com/the-mr17/Not_Again/assets/84731134/1a56c903-d0c8-4235-a1cb-77396fdbc481" width="800">
 
 ## Tech Stack
 
